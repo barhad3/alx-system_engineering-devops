@@ -1,2 +1,3 @@
 #!/bin/bash
-chown betty:staff ./*
+chown betty:vincent ./*
+
