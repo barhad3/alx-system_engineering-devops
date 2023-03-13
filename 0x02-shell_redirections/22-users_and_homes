@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+with open('/etc/passwd') as passwd_file:
+    # Read the file and split lines into fields
+    passwd_lines = [line.strip().split(':') for line in passwd_file.readlines()]
+
+# Create a dictionary of usernames and home directories
+users_homes = {line[0]: line[5] for line in passwd_lines}
+
+# Sort the dictionary by username
+sorted_users_homes = sorted(users_homes.items())
+
+# Print the results
+for user, home in sorted_users_homes:
+    print(f"{user}:{home}")
