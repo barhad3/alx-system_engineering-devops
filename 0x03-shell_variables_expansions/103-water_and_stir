@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "scale=0; ibase=water; obase=bestchol; $((water + stir))" | bc
+echo "obase=bestchol;ibase=water;$WATER+ibase=stir;$STIR" | bc
